@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="zds.dc.org.zhaodashen.ui.fragments.CollectionFragment">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/collection_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@color/colorFullWhite">
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginTop="8dp"
+          android:background="@drawable/edittext"
+          android:gravity="center"
+          android:hint="搜索技能和能人"
+          android:textColorHint="@color/colorCursorGrey"
+          android:textColor="@color/colorFullBlack"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="17sp" />
+   </android.support.v7.widget.Toolbar>
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/nessc_collection"
+       >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginRight="10dp"
+          android:orientation="vertical">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="left"
+             android:textColor="#000000"
+             android:text="合辑"
+             android:paddingLeft="5dp"
+             android:textSize="22sp"
+             />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="left"
+             android:paddingLeft="5dp"
+             android:layout_marginTop="5dp"
+             android:text="兴趣相投，一起讨论"/>
+
+         <android.support.v7.widget.RecyclerView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/rv_collection_list">
+         </android.support.v7.widget.RecyclerView>
+
+
+      </LinearLayout>
+
+
+
+   </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

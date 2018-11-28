@@ -1,0 +1,217 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_edit_article_frag_rootview"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/tb_edit_article_frag"
+        app:navigationIcon="@drawable/ic_return">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布文章"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textColor="@color/colorFullBlack"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_click_update_cover"
+                android:id="@+id/img_article_cover"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorEditArticleBg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="16dp"
+                    android:textColor="@color/wordsBlack"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="文章名称:"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:maxLength="15"
+                    android:layout_marginEnd="16dp"
+                    android:hint="文章名称最长不超过15字"
+                    android:maxLines="1"
+                    android:id="@+id/et_article_name"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorEditArticleBg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:textColor="@color/wordsBlack"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="文章类别:"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/wordsBlack"
+                        android:id="@+id/tv_article_class"
+                        android:hint="点击选择"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tag_article_flowlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:max_select="1"
+                android:padding="20dp">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorEditArticleBg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/wordsBlack"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="文章内容:"
+                />
+
+
+
+            <jp.wasabeef.richeditor.RichEditor
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rich_editor_article"
+                android:layout_height="500dp">
+
+            </jp.wasabeef.richeditor.RichEditor>
+            
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/action_bold"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_bold"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/action_italic"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_italic"
+                        />
+
+
+
+                    <ImageButton
+                        android:id="@+id/action_insert_image"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_insert_image"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/action_insert_link"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_insert_link"
+                        />
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="发布文章"
+                android:id="@+id/btn_post_article"
+                android:textColor="@color/colorFullWhite"
+                android:background="@drawable/button_style_blue"/>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+</LinearLayout>

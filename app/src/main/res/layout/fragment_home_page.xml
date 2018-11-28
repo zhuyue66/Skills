@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="zds.dc.org.zhaodashen.ui.activities.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundGrey">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/homepage_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFullWhite">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:hint="搜索技能和能人"
+            android:textColorHint="@color/colorCursorGrey"
+            android:textColor="@color/colorFullBlack"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="17sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homepage_toolbar">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFullWhite"
+            android:orientation="vertical"/>
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--TopViewPager-->
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/homePage_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <!--推荐能人-->
+                    <LinearLayout
+                        android:id="@+id/mainPageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/homePage_viewpager"
+                        android:background="@color/colorFullWhite"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/colorBlueButton" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:text="推荐能人"
+                            android:textColor="@color/colorFullBlack"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <!--人物列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/person_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mainPageText"
+                        android:background="@color/colorFullWhite"
+                        android:padding="5dp" />
+
+                    <!--分隔线-->
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_10"
+                        android:layout_below="@+id/person_list"
+                        android:background="@color/mainBackgroundGrey" />
+
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+        <!--技能列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/skill_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_sign_up_second_frag_root_view"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorFullWhite">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_return"
+        android:id="@+id/tb_sign_up_second_frag">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置密码"
+                android:layout_gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textColor="@color/colorFullBlack"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:textSize="18sp"
+            android:id="@+id/et_sign_up_second_input_pw"
+            android:background="@null"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/fleetGrey"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="重复密码"
+            android:textSize="18sp"
+            android:maxLength="16"
+            android:background="@null"
+            android:id="@+id/et_sign_up_second_repeat_pw"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/fleetGrey"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:background="@drawable/focused_btn"
+            android:layout_height="?attr/actionBarSize"
+            android:text="完成"
+            android:enabled="false"
+            android:id="@+id/btn_sign_up_second_finish"
+            android:textColor="@color/colorFullWhite"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

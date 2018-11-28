@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFullWhite"
+    android:focusable="true"
+    android:id="@+id/ll_sign_in_frag_root_view"
+    android:focusableInTouchMode="true">
+    android:background="@color/colorFullWhite"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/tb_sign_in_frag"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_return">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录"
+                android:layout_gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textColor="@color/colorFullBlack"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="手机账号"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:maxLength="11"
+            android:id="@+id/et_sign_in_tel_account"
+            android:background="@null"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="number"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/fleetGrey"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:paddingLeft="10dp"
+            android:id="@+id/et_sign_in_pass_word"
+            android:textSize="18sp"
+            android:maxLength="16"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/fleetGrey"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码?"
+            android:id="@+id/tv_sign_in_forget_pw"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom|end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:background="@drawable/focused_btn"
+            android:layout_height="?attr/actionBarSize"
+            android:text="登录"
+            android:enabled="false"
+            android:id="@+id/btn_sign_in_login"
+            android:textColor="@color/colorFullWhite"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

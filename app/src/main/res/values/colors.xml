@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFullWhite">#ffffff</color>
+    <color name="colorBlueButton">#2694ff</color>
+    <color name="colorFullBlack">#000000</color>
+    <color name="colorBtnGrey">#e3e3e3</color>
+    <color name="colorCursorGrey">#7d7d7d</color>
+    <color name="fleetGrey">#f0f0f0</color>
+    <color name="mainBackgroundGrey">#f0f0f0</color>
+    <color name="wordsBlack">#515151</color>
+    <!--自定义沉浸式状态栏的背景色，避免系统沉浸色导致状态栏图标不清楚-->
+    <color name="colorPrimaryDarkGrey">#1a7d7d7d</color>
+    <!--发布文章的浅灰色背景色--><!--发布文章浅白色前景色-->
+    <color name="colorEditArticleBg">#efefef</color>
+    <color name="colorEditArticlePg">#fefefe</color>
+    <color name="colorETCursorColor">#2694ff</color>
+    <color name="red">#c62828</color>
+
+</resources>
